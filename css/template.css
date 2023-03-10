@@ -1,0 +1,113 @@
+.container {
+  width: 100%;
+  min-width: 960px;
+  max-width: 1110px;
+  margin: 0 164px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 32px;
+  margin: 64px 0 54px 0;
+}
+
+header img {
+  width: 60px;
+  height: auto;
+}
+
+header a {
+  color: var(--color-link);
+}
+
+.menu {
+  display: flex;
+  gap: 42px;
+}
+
+.menu a {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--color-link-hover);
+}
+
+.menu .active {
+  color: var(--color-link-active);
+}
+
+
+.interested {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 114px 0;
+
+  color: var(--color-title);
+}
+
+.interested h2 {
+  width: 384px;
+}
+
+.interested a {
+  width: 168px;
+  margin-right: 23%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 80px;
+
+  background-color: var(--color-primary);
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100%;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-left img {
+  width: 60px;
+  height: auto;
+  margin-right: 48px;
+}
+
+.icons-area {
+  display: flex;
+  gap: 16px;
+}
+
+.icons-area img {
+  width: 24px;
+  height: 24px;
+}

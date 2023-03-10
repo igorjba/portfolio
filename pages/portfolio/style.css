@@ -1,0 +1,43 @@
+.main-portifolio {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-portifolio {
+  display: flex;
+  gap: 124px;
+
+  margin-bottom: 80px;
+}
+
+.card-portifolio img {
+  width: 540px;
+  height: 500px;
+}
+
+.card-portifolio-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-portifolio-details h2 {
+  margin: 102px 0 28px 0;
+}
+
+.card-portifolio-details p {
+  margin-bottom: 54px;
+
+  font-size: 16px;
+}
+
+.card-portifolio-details a {
+  width: 174px;
+  margin-bottom: 102px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
