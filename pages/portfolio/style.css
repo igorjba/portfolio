@@ -3,6 +3,30 @@
   flex-direction: column;
 }
 
+.slider {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-prev,
+.btn-next {
+  cursor: pointer;
+  position: absolute;
+}
+
+.btn-prev {
+  top: 50%;
+  left: 11%;
+  width: 3vw;
+
+}
+
+.btn-next {
+  top: 50%;
+  left: calc(85% + 10px);
+  width: 3vw;
+}
+
 .card-portifolio {
   display: flex;
   gap: 124px;
@@ -13,7 +37,18 @@
 .card-portifolio img {
   width: 540px;
   height: 500px;
+  border-radius: 24px;
+
 }
+
+.portifolio-img-left {
+  box-shadow: -6px 9px 10px 0px rgb(0 0 0 / 50%);
+}
+
+.portifolio-img-right {
+  box-shadow: 6px 9px 10px 0px rgb(0 0 0 / 50%);
+}
+
 
 .card-portifolio-details {
   display: flex;

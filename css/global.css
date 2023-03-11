@@ -11,6 +11,25 @@ body {
   align-items: center;
 
   min-height: 100vh;
+
+  background: linear-gradient(45deg, #FFEDE6, #E8D4D1, #fff, #E8D1DC, #FFE6FF);
+  background-size: 300% 300%;
+
+  animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 p {
@@ -32,6 +51,7 @@ h3 {
   font-family: 'Ibarra Real Nova', sans-serif;
   font-style: normal;
 
+  text-shadow: rgb(0 0 0 / 50%) 0px 1px 3px;
   color: var(--color-title);
 }
 
@@ -47,7 +67,6 @@ h2 {
   font-size: 40px;
   line-height: 42px;
   letter-spacing: -0.357143px;
-
 }
 
 h3 {
