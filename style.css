@@ -4,35 +4,6 @@
   align-items: center;
 }
 
-.banner {
-  position: relative;
-}
-
-.banner>img {
-  width: 1110px;
-  height: 600px;
-}
-
-.presentation-area {
-  width: 445px;
-  height: 357px;
-
-
-  background-color: #FAFAFA;
-
-  position: absolute;
-  top: 243px;
-}
-
-.presentation-area h1 {
-  margin: 56px 28px 54px 28px;
-
-}
-
-.presentation-area a {
-  width: 200px;
-}
-
 .about-me {
   display: flex;
   justify-content: space-between;
@@ -72,7 +43,7 @@
   font-size: 16px;
 }
 
-.about-me-details .btn-white {
+.about-me-details .btn-main {
   align-self: center;
 
   width: 204px;
