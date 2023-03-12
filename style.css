@@ -7,8 +7,26 @@
 .about-me {
   display: flex;
   justify-content: space-between;
-  gap: 140px;
+
+
+  gap: 10%;
 }
+
+@media screen and (max-width: 1138px) {
+  .about-me {
+    flex-wrap: wrap;
+  }
+
+  .about-me-details {
+    margin: 0 16px;
+  }
+}
+
+/* @media (max-width: 493px) {
+  .about-me-details h2 {
+    text-align: justify;
+  }
+} */
 
 .about-me img {
   width: 300px;
@@ -30,6 +48,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #E8E2E2;
 }
 
 .about-me-details h2 {

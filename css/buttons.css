@@ -22,7 +22,7 @@ button {
 
 .btn-main {
   border: 1px solid var(--color-btn-border);
-
+  border-radius: 8px;
   font-weight: 400;
 
   color: var(--color-btn-text);
