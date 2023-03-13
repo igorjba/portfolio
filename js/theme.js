@@ -10,14 +10,10 @@ const title = document.querySelector('h2');
 
 const root = document.querySelector(':root')
 
-
-
-
 themeBtn.addEventListener('click', (event) => {
        event.stopPropagation()
        event.preventDefault()
        const currentTheme = localStorage.getItem('theme')
-
        if (!currentTheme || currentTheme === 'light') {
               localStorage.setItem('theme', 'dark')
               applyCurrentTheme()
@@ -29,15 +25,35 @@ themeBtn.addEventListener('click', (event) => {
 
 console.log(localStorage.getItem('theme'))
 console.log(window.location.pathname)
-function applyCurrentTheme() {
-       const currentTheme = localStorage.getItem('theme')
+console.log(window.location.pathname === 'home')
+const home = '/home/'
+console.log(window.location.pathname.includes(home))
 
+
+function applyCurrentTheme() {
+       const home = '/home/'
+       const portfolio = '/portfolio/index'
+       const contato = '/contato/'
+       if (window.location.pathname.includes(home)) {
+              console.log('home')
+              applyGeneralDarkTheme()
+       } else if (window.location.pathname.includes(portfolio)) {
+              console.log('portfolio')
+              applyGeneralDarkTheme()
+              applyPortfolioTheme()
+       } else if (window.location.pathname.includes(contato)) {
+              console.log('contato')
+              applyGeneralDarkTheme()
+       }
+}
+applyCurrentTheme()
+
+function applyGeneralDarkTheme() {
+       const currentTheme = localStorage.getItem('theme')
        if (!currentTheme || currentTheme === 'light') {
               themeBtn.src = '../../assets/icons/light-mode.svg'
               linkedinIcon.src = '../../assets/icons/linkedin-light.svg'
               githubIcon.src = '../../assets/icons/github-light.svg'
-              prevButton.src = '../../assets/icons/arrow-back-dark.svg'
-              nextButton.src = '../../assets/icons/arrow-forward-dark.svg'
 
               root.style.setProperty('--color-link', '#33323d')
               root.style.setProperty('--color-link-active', '#9C0B8F')
@@ -61,8 +77,6 @@ function applyCurrentTheme() {
               themeBtn.src = '../../assets/icons/dark-mode.svg'
               linkedinIcon.src = '../../assets/icons/linkedin-dark.svg'
               githubIcon.src = '../../assets/icons/github-dark.svg'
-              prevButton.src = '../../assets/icons/arrow-back.svg'
-              nextButton.src = '../../assets/icons/arrow-forward.svg'
 
               root.style.setProperty('--color-link', '#fff')
               root.style.setProperty('--color-link-active', '#ba18ac')
@@ -82,13 +96,28 @@ function applyCurrentTheme() {
 
               root.style.setProperty('--color-primary', '#FFC0CB')
               title.style.textShadow = "rgb(0 0 0 / 50%) 0px 0px 2px;"
-              //rgb(0 0 0 / 50%) 0px 1px 3px;
-
        }
-
-
-
-
 }
-applyCurrentTheme()
 
+// function applyHomeTheme() {
+//        const currentTheme = localStorage.getItem('theme')
+//        if (!currentTheme || currentTheme === 'light') {
+//        } else { }
+// }
+
+function applyPortfolioTheme() {
+       const currentTheme = localStorage.getItem('theme')
+       if (!currentTheme || currentTheme === 'light') {
+              prevButton.src = '../../assets/icons/arrow-back-dark.svg'
+              nextButton.src = '../../assets/icons/arrow-forward-dark.svg'
+       } else {
+              prevButton.src = '../../assets/icons/arrow-back.svg'
+              nextButton.src = '../../assets/icons/arrow-forward.svg'
+       }
+}
+
+// function applyContactTheme() {
+//        const currentTheme = localStorage.getItem('theme')
+//        if (!currentTheme || currentTheme === 'light') {
+//        } else { }
+// }

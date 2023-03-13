@@ -1,5 +1,4 @@
 const btnMobile = document.querySelector('.btn-menu-mobile');
-const themeHeader = document.querySelector('#headerTheme');
 const navMenu = document.querySelector('.menu');
 const header = document.querySelector('header');
 
