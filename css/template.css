@@ -13,8 +13,8 @@ header {
 }
 
 header img {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 
   cursor: pointer;
 }
@@ -22,6 +22,21 @@ header img {
 header a {
   color: var(--color-link);
 }
+
+.btn-menu-mobile {
+  display: none;
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+
 
 .menu {
   display: flex;
@@ -47,7 +62,6 @@ header a {
   color: var(--color-link-active);
 }
 
-
 .interested {
   display: flex;
   justify-content: center;
@@ -55,6 +69,8 @@ header a {
   align-items: center;
 
   margin: 50px 0;
+
+  text-align: center;
 
   color: var(--color-title);
 
@@ -105,4 +121,118 @@ footer a {
 .icons-area img {
   width: 24px;
   height: 24px;
+}
+
+
+@media screen and (max-width: 1138px) {
+  /* .btn-theme {
+    margin-left: 32px;
+  } */
+
+  header {
+    padding: 0 16px 0 16px;
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .btn-menu-mobile {
+    display: flex;
+    margin-right: 16px;
+    z-index: 100;
+    gap: .5rem;
+  }
+
+  header.menu-active #hamburger,
+  header.menu-active .btn-menu-mobile {
+    color: var(--color-link-active);
+  }
+
+  header.menu-active #hamburger:hover,
+  header.menu-active .btn-menu-mobile:hover {
+    color: var(--color-link-hover);
+  }
+
+  .btn-menu-mobile:hover,
+  .btn-menu-mobile:hover #hamburger {
+    color: var(--color-link-hover);
+  }
+
+  header.menu-active .menu {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    width: 219px;
+    top: 153px;
+    left: 0px;
+    padding: 78px 32px 32px 32px;
+    height: 284px;
+    border-radius: 0 0 16px 0;
+    z-index: 90;
+
+    background: var(--color-background);
+
+    box-shadow: rgb(0 0 0 / 33%) -2px -8px 9px -6px inset;
+  }
+
+  .menu {
+    display: none;
+  }
+
+
+  #hamburger {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+    color: var(--color-primary);
+
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+
+  }
+
+  header.menu-active #hamburger {
+    border-top-color: transparent;
+  }
+
+  header.menu-active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  header.menu-active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .menu a {
+    margin-left: 16px;
+  }
+}
+
+
+
+@media screen and (max-width: 330px) {
+  h2 {
+    text-align: center;
+  }
+
+  .interested {
+    margin: 32px 0 32px 0;
+  }
+
+  .interested h2 {
+    padding: 0px 16px 0px 16px;
+  }
 }

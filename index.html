@@ -23,8 +23,12 @@
 
 <body>
   <header>
-    <img class="btn-theme" src="./assets/icons/light-mode.svg" alt="Botão de tema" />
-    <nav class="menu">
+    <img class="btn-theme" id="headerTheme" src="./assets/icons/light-mode.svg" alt="Botão de tema" />
+    <button class="btn-menu-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu"
+      aria-expanded="false">Menu
+      <span id="hamburger"></span>
+    </button>
+    <nav class="menu" role="menu">
       <a href="./index.html" class="active">Home</a>
       <a href="./pages/portfolio/index.html">Portfólio</a>
       <a href="./pages/contato/index.html">Contato</a>
@@ -82,5 +86,9 @@
   </footer>
 
 </body>
+<script src="./js/api.js"></script>
+<script src="./js/menu.js"></script>
+<script src="./js/theme.js"></script>
+<script src="./js/main.js"></script>
 
 </html>
