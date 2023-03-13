@@ -41,6 +41,7 @@ header a {
 .menu {
   display: flex;
   gap: 42px;
+  align-self: center;
 }
 
 .menu a {
