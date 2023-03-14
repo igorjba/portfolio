@@ -36,8 +36,6 @@ header a {
   color: var(--color-primary);
 }
 
-
-
 .menu {
   display: flex;
   gap: 42px;
@@ -82,14 +80,6 @@ header a {
   max-width: 168px;
 }
 
-/* header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1110px;
-  margin: 64px 164px;
-} */
-
 footer {
   display: flex;
   align-items: center;
@@ -110,31 +100,20 @@ footer div {
   height: 100%;
 }
 
-footer a {
-  color: #ffffff;
-}
-
 .icons-area {
   display: flex;
   gap: 16px;
 }
 
-.icons-area img {
+.icons-area div {
   width: 24px;
   height: 24px;
 }
 
-
 @media screen and (max-width: 1138px) {
-  /* .btn-theme {
-    margin-left: 32px;
-  } */
-
   header {
     padding: 0 16px 0 16px;
   }
-
-
 }
 
 @media screen and (max-width: 600px) {
@@ -145,18 +124,18 @@ footer a {
     gap: .5rem;
   }
 
-  header.menu-active #hamburger,
+  header.menu-active .hamburger,
   header.menu-active .btn-menu-mobile {
     color: var(--color-link-active);
   }
 
-  header.menu-active #hamburger:hover,
+  header.menu-active .hamburger:hover,
   header.menu-active .btn-menu-mobile:hover {
     color: var(--color-link-hover);
   }
 
   .btn-menu-mobile:hover,
-  .btn-menu-mobile:hover #hamburger {
+  .btn-menu-mobile:hover .hamburger {
     color: var(--color-link-hover);
   }
 
@@ -183,16 +162,15 @@ footer a {
   }
 
 
-  #hamburger {
+  .hamburger {
     display: block;
     border-top: 2px solid;
     width: 20px;
     color: var(--color-primary);
-
   }
 
-  #hamburger::after,
-  #hamburger::before {
+  .hamburger::after,
+  .hamburger::before {
     content: "";
     display: block;
     width: 20px;
@@ -201,18 +179,17 @@ footer a {
     margin-top: 5px;
     transition: .3s;
     position: relative;
-
   }
 
-  header.menu-active #hamburger {
+  header.menu-active .hamburger {
     border-top-color: transparent;
   }
 
-  header.menu-active #hamburger::before {
+  header.menu-active .hamburger::before {
     transform: rotate(135deg);
   }
 
-  header.menu-active #hamburger::after {
+  header.menu-active .hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
   }
@@ -236,4 +213,27 @@ footer a {
   .interested h2 {
     padding: 0px 16px 0px 16px;
   }
+}
+
+.linkedin-icon {
+  background-image: var(--img-footer-icon-linkedin);
+  width: 24px;
+  height: 24px;
+}
+
+.linkedin-icon:hover {
+  background-image: var(--img-footer-icon-linkedin-hover);
+}
+
+.git-icon {
+  background-image: var(--img-footer-icon-git);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+
+}
+
+.git-icon:hover {
+  background-image: var(--img-footer-icon-git-hover);
+
 }

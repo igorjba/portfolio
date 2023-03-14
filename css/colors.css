@@ -4,7 +4,6 @@
     --color-tertiary: #9C0B8F;
 
     --color-title: #50064a;
-    --color-title: #fff;
     --color-text: #33323D;
 
     --color-background: #fff;
@@ -24,4 +23,10 @@
     --color-link: #33323d;
     --color-link-hover: #E810D6;
     --color-link-active: #9C0B8F;
+
+    --img-footer-icon-git: url(../assets/icons/github-light.svg);
+    --img-footer-icon-git-hover: url(../assets/icons/github-hover.svg);
+
+    --img-footer-icon-linkedin: url(../assets/icons/linkedin-light.svg);
+    --img-footer-icon-linkedin-hover: url(../assets/icons/linkedin-hover.svg);
 }
