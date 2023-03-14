@@ -58,12 +58,14 @@ function applyGeneralDarkTheme() {
               root.style.setProperty('--color-background-linear-gradient-4', '#E8D1DC')
               root.style.setProperty('--color-background-linear-gradient-5', '#FFE6FF')
               root.style.setProperty('--color-background', '#fff')
+              root.style.setProperty('--color-btn-shadow', 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px')
 
               root.style.setProperty('--color-btn-border', '#50064a')
               root.style.setProperty('--color-btn-text', '#50064a')
 
               root.style.setProperty('--color-primary', '#50064a')
               title.style.textShadow = "rgb(0 0 0 / 50%) 0px 1px 3px;"
+
 
        } else {
               themeBtn.src = '../../assets/icons/dark-mode.svg'
@@ -83,6 +85,7 @@ function applyGeneralDarkTheme() {
               root.style.setProperty('--color-background-linear-gradient-4', '#3C024D')
               root.style.setProperty('--color-background-linear-gradient-5', '#220142')
               root.style.setProperty('--color-background', '#360431')
+              root.style.setProperty('--color-btn-shadow', 'rgb(255 255 255 / 25%) 0px 6px 12px -2px, rgb(255 255 255 / 30%) 0px 3px 7px -3px')
 
               root.style.setProperty('--color-btn-border', '#FFC0CB')
               root.style.setProperty('--color-btn-text', '#FFC0CB')
