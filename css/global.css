@@ -13,7 +13,6 @@ body {
   min-height: 100vh;
 
   background: linear-gradient(45deg, var(--color-background-linear-gradient-1), var(--color-background-linear-gradient-2), var(--color-background-linear-gradient-3), var(--color-background-linear-gradient-4), var(--color-background-linear-gradient-5));
-  /* background: linear-gradient(45deg, #FFEDE6, #E8D4D1, #fff, #E8D1DC, #FFE6FF); */
   background-size: 300% 300%;
 
   animation: colors 15s ease infinite;
