@@ -14,7 +14,7 @@ Para visualizar o projeto, basta acessar o link: [https://portfolio-igorjba.verc
 
 ## Sobre
  
-Este projeto é o meu portfólio pessoal, onde compartilho informações sobre mim e os projetos que já desenvolvi. Foi construído utilizando HTML, CSS e JavaScript, e tem como objetivo expor meus trabalhos, como o CubosFlix, uma página com informações sobre filmes e séries populares e bem avaliados em cartaz. Além disso, apresento uma página fictícia de portfólio que inclui quatro projetos criados para um possível cliente.
+Este projeto é o meu portfólio pessoal, onde compartilho informações sobre mim e os projetos que já desenvolvi. Foi construído utilizando [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) e [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) (utilizando a interface de programação [DOM](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model)), e tem como objetivo expor meus trabalhos, como o CubosFlix, uma página com informações sobre filmes e séries populares e bem avaliados em cartaz. Além disso, apresento uma página fictícia de portfólio que inclui quatro projetos criados para um possível cliente.
 
 ## Construído com
 
