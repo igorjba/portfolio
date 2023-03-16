@@ -3,10 +3,8 @@ const sliderTitle = document.querySelector(".card-portifolio-details h2")
 const sliderDescription = document.querySelector(".card-portifolio-details p")
 const sliderProjectLinkBtn = document.querySelector(".btn-project")
 const sliderGitLinkBtn = document.querySelector(".btn-git")
-
 const nextSliderBtn = document.querySelector(".btn-next")
 const previewSlideButton = document.querySelector(".btn-prev")
-
 
 const sliderProjectsList = [
     {
@@ -15,6 +13,7 @@ const sliderProjectsList = [
         about: "O portfólio web apresenta quatro projetos: Manage, Bookmark, Insure e Fylo, com a estrutura e design construídos em HTML e CSS, seguindo o layout disponível no Figma. Apesar de oferecer uma apresentação visual atrativa, a página ainda não é responsiva",
         page: "https://igorjba.github.io/desafio-frontend-M02-2023/",
         repository: "https://github.com/igorjba/desafio-frontend-M02-2023"
+
     }, {
         name: "cubos-flix",
         photo: "../../assets/portfolio/image-portfolio-cubos-flix.png",
@@ -27,10 +26,12 @@ const sliderProjectsList = [
 window.addEventListener("load", (event) => {
     event.stopPropagation()
     event.preventDefault()
+
     loadSlider(sliderProjectsList, 0)
 })
 
 function loadSlider(projectsList, sliderProjectsListIndex = 0) {
+
     sliderImage.style.backgroundImage = `url(${projectsList[sliderProjectsListIndex].photo})`
     sliderTitle.textContent = `${(projectsList[sliderProjectsListIndex].name)}`
     sliderDescription.textContent = `${(projectsList[sliderProjectsListIndex].about)}`
@@ -46,6 +47,7 @@ previewSlideButton.addEventListener("click", (event) => {
     if (sliderIndex === 0) {
         sliderIndex = sliderProjectsList.length - 1
         loadSlider(sliderProjectsList, sliderIndex)
+
     } else {
         sliderIndex--
         loadSlider(sliderProjectsList, sliderIndex)
@@ -59,6 +61,7 @@ nextSliderBtn.addEventListener("click", (event) => {
     if (sliderIndex === sliderProjectsList.length - 1) {
         sliderIndex = 0
         loadSlider(sliderProjectsList, sliderIndex)
+
     } else {
         sliderIndex++
         loadSlider(sliderProjectsList, sliderIndex)

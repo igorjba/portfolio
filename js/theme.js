@@ -1,13 +1,9 @@
 const themeBtn = document.querySelector('.btn-theme');
-
 const linkedinIcon = document.querySelector('.linkedin-icon');
 const githubIcon = document.querySelector('.git-icon');
-
 const prevButton = document.querySelector('.btn-prev');
 const nextButton = document.querySelector('.btn-next');
-
 const title = document.querySelector('h2');
-
 const root = document.querySelector(':root')
 
 themeBtn.addEventListener('click', (event) => {
@@ -41,17 +37,14 @@ applyCurrentTheme()
 function applyGeneralDarkTheme() {
        const currentTheme = localStorage.getItem('theme')
        if (!currentTheme || currentTheme === 'light') {
-              themeBtn.src = '../../assets/icons/light-mode.svg'
 
+              themeBtn.src = '../../assets/icons/light-mode.svg'
               root.style.setProperty('--img-footer-icon-git', 'url(../assets/icons/github-light.svg)')
               root.style.setProperty('--img-footer-icon-linkedin', 'url(../assets/icons/linkedin-light.svg)')
-
               root.style.setProperty('--color-link', '#33323d')
               root.style.setProperty('--color-link-active', '#9C0B8F')
-
               root.style.setProperty('--color-text', '#33323D')
               root.style.setProperty('--color-title', '#50064a')
-
               root.style.setProperty('--color-background-linear-gradient-1', '#FFEDE6')
               root.style.setProperty('--color-background-linear-gradient-2', '#E8D4D1')
               root.style.setProperty('--color-background-linear-gradient-3', '#fff')
@@ -59,26 +52,19 @@ function applyGeneralDarkTheme() {
               root.style.setProperty('--color-background-linear-gradient-5', '#FFE6FF')
               root.style.setProperty('--color-background', '#fff')
               root.style.setProperty('--color-btn-shadow', 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px')
-
               root.style.setProperty('--color-btn-border', '#50064a')
               root.style.setProperty('--color-btn-text', '#50064a')
-
               root.style.setProperty('--color-primary', '#50064a')
               title.style.textShadow = "rgb(0 0 0 / 50%) 0px 1px 3px;"
 
-
        } else {
               themeBtn.src = '../../assets/icons/dark-mode.svg'
-
               root.style.setProperty('--img-footer-icon-git', 'url(../assets/icons/github-dark.svg)')
               root.style.setProperty('--img-footer-icon-linkedin', 'url(../assets/icons/linkedin-dark.svg)')
-
               root.style.setProperty('--color-link', '#fff')
               root.style.setProperty('--color-link-active', '#ba18ac')
-
               root.style.setProperty('--color-text', '#fff')
               root.style.setProperty('--color-title', '#FFC0CB')
-
               root.style.setProperty('--color-background-linear-gradient-1', '#420301')
               root.style.setProperty('--color-background-linear-gradient-2', '#4D0220')
               root.style.setProperty('--color-background-linear-gradient-3', '#360431')
@@ -86,10 +72,8 @@ function applyGeneralDarkTheme() {
               root.style.setProperty('--color-background-linear-gradient-5', '#220142')
               root.style.setProperty('--color-background', '#360431')
               root.style.setProperty('--color-btn-shadow', 'rgb(255 255 255 / 25%) 0px 6px 12px -2px, rgb(255 255 255 / 30%) 0px 3px 7px -3px')
-
               root.style.setProperty('--color-btn-border', '#FFC0CB')
               root.style.setProperty('--color-btn-text', '#FFC0CB')
-
               root.style.setProperty('--color-primary', '#FFC0CB')
               title.style.textShadow = "rgb(0 0 0 / 50%) 0px 0px 2px;"
        }

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 }
@@ -50,8 +51,8 @@ h2,
 h3 {
   font-family: 'Ibarra Real Nova', sans-serif;
   font-style: normal;
-
   text-shadow: rgb(0 0 0 / 50%) 0px 1px 3px;
+
   color: var(--color-title);
 }
 

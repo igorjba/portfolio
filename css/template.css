@@ -7,6 +7,7 @@
 header {
   display: flex;
   justify-content: space-between;
+
   width: 100%;
   max-width: 1110px;
   margin: 64px 164px;
@@ -25,6 +26,7 @@ header a {
 
 .btn-menu-mobile {
   display: none;
+
   font-family: 'Public Sans';
   font-style: normal;
   font-weight: 400;
@@ -33,13 +35,15 @@ header a {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
+
   color: var(--color-primary);
 }
 
 .menu {
   display: flex;
-  gap: 42px;
   align-self: center;
+
+  gap: 42px;
 }
 
 .menu a {
@@ -72,7 +76,6 @@ header a {
   text-align: center;
 
   color: var(--color-title);
-
 }
 
 .interested a {
@@ -102,6 +105,7 @@ footer div {
 
 .icons-area {
   display: flex;
+
   gap: 16px;
 }
 
@@ -119,6 +123,7 @@ footer div {
 @media screen and (max-width: 600px) {
   .btn-menu-mobile {
     display: flex;
+
     margin-right: 16px;
     z-index: 100;
     gap: .5rem;
@@ -164,21 +169,26 @@ footer div {
 
   .hamburger {
     display: block;
+
     border-top: 2px solid;
     width: 20px;
+
     color: var(--color-primary);
   }
 
   .hamburger::after,
   .hamburger::before {
-    content: "";
     display: block;
+
     width: 20px;
     height: 2px;
-    background: currentColor;
-    margin-top: 5px;
     transition: .3s;
     position: relative;
+    margin-top: 5px;
+
+    background: currentColor;
+
+    content: "";
   }
 
   header.menu-active .hamburger {
@@ -190,8 +200,9 @@ footer div {
   }
 
   header.menu-active .hamburger::after {
-    transform: rotate(-135deg);
     top: -7px;
+
+    transform: rotate(-135deg);
   }
 
   .menu a {
@@ -217,6 +228,7 @@ footer div {
 
 .linkedin-icon {
   background-image: var(--img-footer-icon-linkedin);
+
   width: 24px;
   height: 24px;
 }
@@ -228,6 +240,7 @@ footer div {
 .git-icon {
   background-image: var(--img-footer-icon-git);
   background-repeat: no-repeat;
+
   width: 24px;
   height: 24px;
 

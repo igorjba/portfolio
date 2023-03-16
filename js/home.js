@@ -11,9 +11,9 @@ function loadProfilePhoto() {
     const profileImageList = [
         "image-homepage-profile0.png",
         "image-homepage-profile1.png",
-        "image-homepage-profile2.png"]
+        "image-homepage-profile2.png"
+    ]
     const currentImage = localStorage.getItem('profileImage')
-
     let profileImageListIndex = currentImage
 
     if (profileImageListIndex < profileImageList.length - 1) {

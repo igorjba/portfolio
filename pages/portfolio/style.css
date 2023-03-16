@@ -19,8 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 124px;
 
+  gap: 124px;
   margin-bottom: 80px;
 }
 
@@ -84,7 +84,6 @@
 }
 
 @media screen and (max-width: 1227px) {
-
   header {
     width: 90%;
   }
@@ -112,8 +111,6 @@
     align-self: center;
   }
 
-
-
   .btn-prev {
     position: absolute;
     left: 2%;
@@ -140,7 +137,6 @@
 @media screen and (max-width: 349px) {
   .card-portifolio {
     margin-bottom: 32px;
-
   }
 
   .card-portifolio-details {
