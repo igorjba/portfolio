@@ -12,28 +12,17 @@ const sliderProjectsList = [
     {
         name: "portfólio",
         photo: "../../assets/portfolio/image-portfolio-portfolio.png",
-        about: "portfólio que apresenta quatro projetos: Manage, Bookmark, Insure e Fylo. Utilizamos HTML e CSS para construir a estrutura e o design da página, seguindo o layout disponível no Figma.",
+        about: "O portfólio web apresenta quatro projetos: Manage, Bookmark, Insure e Fylo, com a estrutura e design construídos em HTML e CSS, seguindo o layout disponível no Figma. Apesar de oferecer uma apresentação visual atrativa, a página ainda não é responsiva",
         page: "https://igorjba.github.io/desafio-frontend-M02-2023/",
         repository: "https://github.com/igorjba/desafio-frontend-M02-2023"
     }, {
-        name: "bookmark",
-        photo: "../../assets/portfolio/image-portfolio-bookmark.jpg",
-        about: "Esse projeto me fez criar uma landing page responsiva de acordo com o design que recebi. Usei HTML5, CSS Grid e JavaScript para as áreas interativas, como a área de Features.",
-        page: "#",
-        repository: "#"
-    }, {
-        name: "insure",
-        photo: "../../assets/portfolio/image-portfolio-insure.jpg",
-        about: "Este foi um projeto pequeno que consistiu em HTML e CSS principalmente. Eu construí uma landing page totalmente responsiva. O único JavaScript que usei foi para o menu de navegação mobile.",
-        page: "#",
-        repository: "#"
-    }, {
-        name: "fylo",
-        photo: "../../assets/portfolio/image-portfolio-fylo.jpg",
-        about: "Este projeto foi puramente HTML e CSS. Eu recebi designs mobile e desktop para construir, então ele foi totalmente responsivo. Eu tomei um caminho mobile-first e usei CSS moderno como Flexbox e Grid para criar o layout.",
-        page: "#",
-        repository: "#"
-    }]
+        name: "cubos-flix",
+        photo: "../../assets/portfolio/image-portfolio-cubos-flix.png",
+        about: "Projeto em Javascript, HTML e CSS que utiliza a API do TMDb com Axios para fornecer informações sobre filmes e séries populares e bem avaliados em cartaz. O design e estrutura da página foram planejados para oferecer uma navegação intuitiva, no entanto, o layout ainda não é responsivo.",
+        page: "https://igorjba.github.io/cubos-flix/",
+        repository: "https://github.com/igorjba/cubos-flix"
+    }
+]
 
 window.addEventListener("load", (event) => {
     event.stopPropagation()
