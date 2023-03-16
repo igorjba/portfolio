@@ -10,11 +10,11 @@ const previewSlideButton = document.querySelector(".btn-prev")
 
 const sliderProjectsList = [
     {
-        name: "manage",
-        photo: "../../assets/portfolio/image-portfolio-manage.jpg",
-        about: "Esse projeto me fez criar uma landing page responsiva de acordo com o design que recebi. Usei HTML5, CSS Grid e JavaScript para as áreas interativas, como o slider de testimoniais.",
-        page: "#",
-        repository: "#"
+        name: "portfólio",
+        photo: "../../assets/portfolio/image-portfolio-portfolio.png",
+        about: "portfólio que apresenta quatro projetos: Manage, Bookmark, Insure e Fylo. Utilizamos HTML e CSS para construir a estrutura e o design da página, seguindo o layout disponível no Figma.",
+        page: "https://igorjba.github.io/desafio-frontend-M02-2023/",
+        repository: "https://github.com/igorjba/desafio-frontend-M02-2023"
     }, {
         name: "bookmark",
         photo: "../../assets/portfolio/image-portfolio-bookmark.jpg",
