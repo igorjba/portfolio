@@ -35,7 +35,6 @@
 }
 
 .card-portifolio-img-container {
-  background-image: url(../../assets/portfolio/manage/image-portfolio-manage.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,6 +59,7 @@
 
 .card-portifolio-details h2 {
   margin: 102px 0 28px 0;
+  text-transform: capitalize;
 }
 
 .card-portifolio-details p {

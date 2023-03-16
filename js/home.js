@@ -1,12 +1,10 @@
 const profileImage = document.querySelector(".profile-img")
 
-
 window.addEventListener("load", (event) => {
     event.stopPropagation()
     event.preventDefault()
     loadProfilePhoto()
 })
-
 
 let profileImageListIndex = 0
 function loadProfilePhoto() {
@@ -29,3 +27,4 @@ function loadProfilePhoto() {
     }
     profileImage.src = `../../assets/home/${profileImageList[profileImageListIndex]}`
 }
+
