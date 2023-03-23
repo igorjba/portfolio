@@ -9,14 +9,14 @@ const previewSlideButton = document.querySelector(".btn-prev")
 const sliderProjectsList = [
     {
         name: "portfólio",
-        photo: "../../assets/portfolio/image-portfolio-portfolio.png",
+        photo: "../../assets/portfolio/image-portfolio-portfolio.jpg",
         about: "O portfólio web apresenta quatro projetos: Manage, Bookmark, Insure e Fylo, com a estrutura e design construídos em HTML e CSS, seguindo o layout disponível no Figma. Apesar de oferecer uma apresentação visual atrativa, a página ainda não é responsiva",
         page: "https://igorjba.github.io/desafio-frontend-M02-2023/",
         repository: "https://github.com/igorjba/desafio-frontend-M02-2023"
 
     }, {
         name: "cubos-flix",
-        photo: "../../assets/portfolio/image-portfolio-cubos-flix.png",
+        photo: "../../assets/portfolio/image-portfolio-cubos-flix.jpg",
         about: "Projeto em Javascript, HTML e CSS que utiliza a API do TMDb com Axios para fornecer informações sobre filmes e séries populares e bem avaliados em cartaz. O design e estrutura da página foram planejados para oferecer uma navegação intuitiva, no entanto, o layout ainda não é responsivo.",
         page: "https://igorjba.github.io/cubos-flix/",
         repository: "https://github.com/igorjba/cubos-flix"

@@ -9,9 +9,9 @@ window.addEventListener("load", (event) => {
 let profileImageListIndex = 0
 function loadProfilePhoto() {
     const profileImageList = [
-        "image-homepage-profile0.png",
-        "image-homepage-profile1.png",
-        "image-homepage-profile2.png"
+        "image-homepage-profile0.jpg",
+        "image-homepage-profile1.jpg",
+        "image-homepage-profile2.jpg"
     ]
     const currentImage = localStorage.getItem('profileImage')
     let profileImageListIndex = currentImage
