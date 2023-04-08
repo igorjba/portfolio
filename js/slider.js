@@ -20,7 +20,15 @@ const sliderProjectsList = [
         about: "Projeto em Javascript, HTML e CSS que utiliza a API do TMDb com Axios para fornecer informações sobre filmes e séries populares e bem avaliados em cartaz. O design e estrutura da página foram planejados para oferecer uma navegação intuitiva, no entanto, o layout ainda não é responsivo.",
         page: "https://igorjba.github.io/cubos-flix/",
         repository: "https://github.com/igorjba/cubos-flix"
+    },
+    {
+        name: "jogo da memoria",
+        photo: "../../assets/portfolio/image-portfolio-jogo-da-memoria.jpg",
+        about: "Projeto responsivo utilizando ReactJS. Este projeto é um jogo da memória onde o usuário deve encontrar os pares de cartas iguais. O jogo possui um contador de movimentos e um botão para reiniciar o jogo.",
+        page: "https://jogo-da-memoria-chi.vercel.app",
+        repository: "https://github.com/igorjba/jogo-da-memoria"
     }
+
 ]
 
 window.addEventListener("load", (event) => {
