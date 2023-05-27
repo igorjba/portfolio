@@ -5,6 +5,8 @@ const sliderProjectLinkBtn = document.querySelector(".btn-project")
 const sliderGitLinkBtn = document.querySelector(".btn-git")
 const nextSliderBtn = document.querySelector(".btn-next")
 const previewSlideButton = document.querySelector(".btn-prev")
+const projectImageDiv = document.querySelector(".card-portifolio-img-container")
+
 
 const sliderProjectsList = [
     {
@@ -44,6 +46,14 @@ window.addEventListener("load", (event) => {
 
     loadSlider(sliderProjectsList, 0)
 })
+
+projectImageDiv.addEventListener("click", (event) => {
+    event.stopPropagation()
+    event.preventDefault()
+
+    window.open(`${(sliderProjectsList[sliderIndex].page)}`, "_blank")
+})
+
 
 function loadSlider(projectsList, sliderProjectsListIndex = 0) {
 
