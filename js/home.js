@@ -6,25 +6,22 @@ window.addEventListener("load", (event) => {
     loadProfilePhoto()
 })
 
-let profileImageListIndex = 0
-function loadProfilePhoto() {
-    const profileImageList = [
-        "image-homepage-profile0.jpg",
-        "image-homepage-profile1.jpg",
-        "image-homepage-profile2.jpg"
-    ]
-    const currentImage = localStorage.getItem('profileImage')
-    let profileImageListIndex = currentImage
+const profileImageList = [
 
-    if (profileImageListIndex < profileImageList.length - 1) {
-        profileImageListIndex++
-        localStorage.setItem('profileImage', `${[profileImageListIndex]}`)
+    "image-homepage-profile0.jpg",
+    "image-homepage-profile1.jpg",
+    "image-homepage-profile2.jpg"
+]
+const currentImage = localStorage.getItem('profileImage')
+let profileImageListIndex = currentImage
 
-    } else {
-        profileImageListIndex = 0
-        localStorage.setItem('profileImage', `${[profileImageListIndex]}`)
+if (profileImageListIndex < profileImageList.length - 1) {
+    profileImageListIndex++
+    localStorage.setItem('profileImage', `${[profileImageListIndex]}`)
+    profileImage.src = `../../assets/home/${profileImageList[profileImageListIndex]}`
 
-    }
+} else {
+    profileImageListIndex = 0
+    localStorage.setItem('profileImage', `${[profileImageListIndex]}`)
     profileImage.src = `../../assets/home/${profileImageList[profileImageListIndex]}`
 }
-

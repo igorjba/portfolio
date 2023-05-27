@@ -27,6 +27,13 @@ const sliderProjectsList = [
         about: "Projeto responsivo utilizando ReactJS. Este projeto é um jogo da memória onde o usuário deve encontrar os pares de cartas iguais. O jogo possui um contador de movimentos e um botão para reiniciar o jogo.",
         page: "https://jogo-da-memoria-chi.vercel.app",
         repository: "https://github.com/igorjba/jogo-da-memoria"
+    },
+    {
+        name: "calçados masculinos",
+        photo: "../../assets/portfolio/image-portfolio-calcados.jpg",
+        about: "Este projeto é uma página de exposição de sapatos com modais interativos. Desenvolvido com HTML, CSS, JavaScript e ReactJS, oferece uma visualização detalhada dos produtos. No entanto, ainda não é responsivo.",
+        page: "https://moda-masculina.vercel.app/",
+        repository: "https://github.com/igorjba/moda-masculina"
     }
 
 ]
