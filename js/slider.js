@@ -7,7 +7,6 @@ const nextSliderBtn = document.querySelector(".btn-next")
 const previewSlideButton = document.querySelector(".btn-prev")
 const projectImageDiv = document.querySelector(".card-portifolio-img-container")
 
-
 const sliderProjectsList = [{
     name: "Music Player",
     photo: "../../assets/portfolio/image-portfolio-music-player.jpg",
@@ -16,18 +15,11 @@ const sliderProjectsList = [{
     repository: "https://github.com/igorjba/music-player"
 },
 {
-    name: "portfólio",
-    photo: "../../assets/portfolio/image-portfolio-portfolio.jpg",
-    about: "O portfólio web apresenta quatro projetos: Manage, Bookmark, Insure e Fylo, com a estrutura e design construídos em HTML e CSS, seguindo o layout disponível no Figma. Apesar de oferecer uma apresentação visual atrativa, a página ainda não é responsiva",
-    page: "https://igorjba.github.io/desafio-frontend-M02-2023/",
-    repository: "https://github.com/igorjba/desafio-frontend-M02-2023"
-
-}, {
-    name: "cubos-flix",
-    photo: "../../assets/portfolio/image-portfolio-cubos-flix.jpg",
-    about: "Projeto em Javascript, HTML e CSS que utiliza a API do TMDb com Axios para fornecer informações sobre filmes e séries populares e bem avaliados em cartaz. O design e estrutura da página foram planejados para oferecer uma navegação intuitiva, no entanto, o layout ainda não é responsivo.",
-    page: "https://igorjba.github.io/cubos-flix/",
-    repository: "https://github.com/igorjba/cubos-flix"
+    name: "calçados masculinos",
+    photo: "../../assets/portfolio/image-portfolio-calcados.jpg",
+    about: "Este projeto é uma página de exposição de sapatos com modais interativos. Desenvolvido com HTML, CSS, JavaScript e ReactJS, oferece uma visualização detalhada dos produtos. No entanto, ainda não é responsivo.",
+    page: "https://moda-masculina.vercel.app/",
+    repository: "https://github.com/igorjba/moda-masculina"
 },
 {
     name: "jogo da memoria",
@@ -37,14 +29,20 @@ const sliderProjectsList = [{
     repository: "https://github.com/igorjba/jogo-da-memoria"
 },
 {
-    name: "calçados masculinos",
-    photo: "../../assets/portfolio/image-portfolio-calcados.jpg",
-    about: "Este projeto é uma página de exposição de sapatos com modais interativos. Desenvolvido com HTML, CSS, JavaScript e ReactJS, oferece uma visualização detalhada dos produtos. No entanto, ainda não é responsivo.",
-    page: "https://moda-masculina.vercel.app/",
-    repository: "https://github.com/igorjba/moda-masculina"
+    name: "cubos-flix",
+    photo: "../../assets/portfolio/image-portfolio-cubos-flix.jpg",
+    about: "Projeto em Javascript, HTML e CSS que utiliza a API do TMDb com Axios para fornecer informações sobre filmes e séries populares e bem avaliados em cartaz. O design e estrutura da página foram planejados para oferecer uma navegação intuitiva, no entanto, o layout ainda não é responsivo.",
+    page: "https://igorjba.github.io/cubos-flix/",
+    repository: "https://github.com/igorjba/cubos-flix"
+},
+{
+    name: "portfólio",
+    photo: "../../assets/portfolio/image-portfolio-portfolio.jpg",
+    about: "O portfólio web apresenta quatro projetos: Manage, Bookmark, Insure e Fylo, com a estrutura e design construídos em HTML e CSS, seguindo o layout disponível no Figma. Apesar de oferecer uma apresentação visual atrativa, a página ainda não é responsiva",
+    page: "https://igorjba.github.io/desafio-frontend-M02-2023/",
+    repository: "https://github.com/igorjba/desafio-frontend-M02-2023"
+
 }
-
-
 ]
 
 window.addEventListener("load", (event) => {
