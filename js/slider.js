@@ -8,6 +8,20 @@ const previewSlideButton = document.querySelector(".btn-prev")
 const projectImageDiv = document.querySelector(".card-portifolio-img-container")
 
 const sliderProjectsList = [{
+        name: "MoneyFlix",
+        photo: "../../assets/portfolio/image-portfolio-moneyflix.jpg",
+        about: "O 'MoneyFlix' é uma aplicação de gerenciamento financeiro que permite aos usuários manter um controle detalhado de suas finanças pessoais. Desenvolvida com um frontend em React, oferece uma interface amigável para gerenciamento de transações e visualização de relatórios detalhados. Suas principais características incluem cadastro de usuários, gestão de transações, e resumos financeiros com design responsivo e interativo. O backend, desenvolvido em Node.js e Express, lida com autenticação de usuários, CRUD de transações, e interações com banco de dados PostgreSQL. O projeto está disponível para visualização na Vercel e pode ser configurado localmente seguindo as instruções de instalação e uso nos repositórios GitHub.",
+        page: "https://moneyflix-front.vercel.app/",
+        repository: "https://github.com/igorjba/moneyflix-front"
+    },
+    {
+    name: "Dindin",
+    photo: "../../assets/portfolio/image-portfolio-dindin.jpg",
+    about: "O 'Dindin' é um sistema de controle financeiro pessoal projetado para ajudar usuários a gerenciar suas finanças. Oferece um panorama geral de transações, incluindo entradas e saídas. Desenvolvido com tecnologias front-end e back-end, o projeto permite o cadastro e login de usuários, adição, edição e exclusão de transações, visualização de resumo financeiro, ordenação e filtragem de transações por data e categoria, e edição do perfil do usuário. Importante destacar que o projeto não é responsivo e tem visualização ideal em 1440x1024. Para rodar localmente, é necessário ter Node.js e Git. O backend utiliza Express e outras dependências, e o frontend foi construído com React e outras bibliotecas. O frontend está hospedado na Vercel.",
+    page: "https://dindin-psi.vercel.app/",
+    repository: "https://github.com/igorjba/dindin"
+},
+{
     name: "Music Player",
     photo: "../../assets/portfolio/image-portfolio-music-player.jpg",
     about: "Este projeto é um player de música, desenvolvido com HTML, CSS, JavaScript (utilizando a interface de programação DOM) e ReactJS. Ele permite reproduzir, pausar, avançar e retroceder músicas, além de visualizar o progresso de cada uma delas. Embora ofereça uma experiência interativa e envolvente, o projeto ainda não possui uma implementação responsiva.",
