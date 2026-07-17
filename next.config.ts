@@ -5,20 +5,27 @@ import type { NextConfig } from "next";
  * sem chamadas a terceiros. 'unsafe-inline' em script cobre os inline de hidratacao
  * do Next — a alternativa (nonce) exigiria middleware dinamico e quebraria o build
  * estatico; aceitavel aqui porque nao ha input de usuario nem conteudo refletido.
+ *
+ * Em dev o Turbopack/React usam eval() para HMR e debug, entao 'unsafe-eval' e o
+ * websocket do HMR so entram em desenvolvimento. A CSP de producao permanece rigida
+ * (sem eval), e 'upgrade-insecure-requests' so vale em producao (em localhost http
+ * ele so atrapalharia).
  */
+const isDev = process.env.NODE_ENV !== "production";
+
 const csp = [
   "default-src 'self'",
   "base-uri 'self'",
   "object-src 'none'",
   "frame-ancestors 'none'",
   "form-action 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  isDev ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'" : "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",
-  "connect-src 'self'",
+  isDev ? "connect-src 'self' ws:" : "connect-src 'self'",
   "manifest-src 'self'",
-  "upgrade-insecure-requests",
+  ...(isDev ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
 const securityHeaders = [
