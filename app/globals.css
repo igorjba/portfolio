@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: oklch(0.145 0.008 255);
+  --color-ink-2: oklch(0.185 0.009 255);
+  --color-ink-3: oklch(0.235 0.011 255);
+  --color-line: oklch(0.3 0.012 255);
+  --color-bone: oklch(0.94 0.006 85);
+  --color-dust: oklch(0.68 0.012 258);
+  --color-dust-2: oklch(0.52 0.012 258);
+  --color-signal: oklch(0.81 0.155 78);
+  --color-signal-dim: oklch(0.63 0.12 78);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --text-display: clamp(2.75rem, 1.2rem + 6.6vw, 7rem);
+  --text-title: clamp(1.9rem, 1.1rem + 3vw, 3.25rem);
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  ::selection {
+    background: var(--color-signal);
+    color: var(--color-ink);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa a nav fixa quando um link de ancora aterrissa numa secao. */
+    scroll-padding-top: 6rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-dust-2);
+}
+
+/* Ruido fino: tira o aspecto de gradiente digital chapado das superficies. */
+@utility grain {
+  position: relative;
+  isolation: isolate;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.028;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/*
+ * Reveal com degradacao: o estado escondido so vale quando ha JS (scripting: enabled),
+ * detectado em CSS puro. Sem JS a pagina fica legivel em vez de preta — e sem flash,
+ * porque nao depende de um script marcar classe apos o paint.
+ */
+@layer base {
+  @media (scripting: enabled) {
+    [data-reveal] {
+      transition:
+        opacity 0.7s var(--ease-out-quint),
+        transform 0.7s var(--ease-out-quint);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    [data-reveal]:not(.is-visible) {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+  }
+}
+
+/* Entrada do hero: CSS puro, sem depender de JS para chegar ao estado final. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+}
+
+@keyframes underline-in {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@utility rise {
+  animation: rise 0.85s var(--ease-out-quint) both;
+  animation-delay: var(--rise-delay, 0ms);
+}
+
+@keyframes signal-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+
+@keyframes trace-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,10 @@
+# Normaliza fim de linha: LF no repo, checkout nativo. Evita ruido CRLF entre Windows e a Vercel.
+* text=auto eol=lf
+
+# Binarios: nunca normalizar.
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.ttf binary
+*.woff2 binary
+*.ico binary
