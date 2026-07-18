@@ -67,7 +67,7 @@ export function Nav({ lang }: { lang: Lang }) {
           className="group flex items-center gap-2.5 font-mono text-sm tracking-tight text-bone"
         >
           <PulseDot />
-          <span className="font-medium">igor bahia</span>
+          <span className="font-medium">Igor Bahia</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label={ui.menu[lang]}>
