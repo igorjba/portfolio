@@ -387,11 +387,11 @@ export const stack = {
   },
   groups: [
     {
-      title: { pt: "Frente", en: "Front end" },
+      title: { pt: "Frontend", en: "Front end" },
       items: ["TypeScript", "React", "Next.js", "Tailwind", "SSR"],
     },
     {
-      title: { pt: "Trás", en: "Back end" },
+      title: { pt: "Backend", en: "Back end" },
       items: ["Node.js", "Fastify", "Express", "Python", "Django/DRF", "C#", ".NET"],
     },
     {
