@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { archiveProjects, featuredProjects, work, type Lang, type Project } from "@/content/site";
+import { featuredProjects, work, type Lang, type Project } from "@/content/site";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { Tag } from "@/components/tag";
@@ -110,40 +110,11 @@ export function Work({ lang }: { lang: Lang }) {
         </Reveal>
 
         <ul className="mt-14 space-y-5">
-          {featuredProjects.map((project, index) => (
-            <FeaturedCard key={project.slug} project={project} lang={lang} index={index} />
-          ))}
-        </ul>
-
-        <Reveal className="mt-20">
-          <div className="flex items-baseline gap-4">
-            <h3 className="label !text-dust-2">{work.archiveTitle[lang]}</h3>
-            <span aria-hidden="true" className="h-px flex-1 bg-line" />
-          </div>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-dust-2">{work.archiveNote[lang]}</p>
-        </Reveal>
-
-        <ul className="mt-6 divide-y divide-line/60 border-y border-line/60">
-          {archiveProjects.map((project, index) => (
-            <Reveal as="li" key={project.slug} delay={index * 0.04}>
-              <a
-                href={project.live ?? project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/link flex flex-wrap items-baseline gap-x-4 gap-y-1 py-4 transition-colors duration-300 hover:bg-ink-2/40"
-              >
-                <span className="label w-10 shrink-0">{project.year}</span>
-                <span className="font-medium text-bone transition-colors duration-300 group-hover/link:text-signal">
-                  {project.name}
-                </span>
-                <span className="hidden flex-1 text-sm text-dust-2 sm:block">{project.blurb[lang]}</span>
-                <span className="font-mono text-[11px] text-dust-2">{project.stack.join(" · ")}</span>
-                <span className="text-dust-2 transition-colors duration-300 group-hover/link:text-signal">
-                  <ArrowUpRight />
-                </span>
-              </a>
-            </Reveal>
-          ))}
+          {featuredProjects
+            .filter((project) => !project.disabled)
+            .map((project, index) => (
+              <FeaturedCard key={project.slug} project={project} lang={lang} index={index} />
+            ))}
         </ul>
       </div>
     </section>

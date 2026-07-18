@@ -232,6 +232,8 @@ export type Project = {
   live?: string;
   /** Ausente quando o repositorio e privado. */
   repo?: string;
+  /** Mantido nos dados, oculto da renderizacao. */
+  disabled?: boolean;
 };
 
 export const featuredProjects: ReadonlyArray<Project> = [
@@ -302,6 +304,7 @@ export const featuredProjects: ReadonlyArray<Project> = [
     stack: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
     live: "https://moneyflix-front.vercel.app/",
     repo: "https://github.com/igorjba/moneyflix-front",
+    disabled: true,
   },
   {
     slug: "dindin",
@@ -319,45 +322,7 @@ export const featuredProjects: ReadonlyArray<Project> = [
     stack: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
     live: "https://dindin-psi.vercel.app/",
     repo: "https://github.com/igorjba/dindin",
-  },
-];
-
-export const archiveProjects: ReadonlyArray<Project> = [
-  {
-    slug: "cubos-flix",
-    name: "Cubos Flix",
-    year: "2023",
-    blurb: {
-      pt: "Catálogo de filmes e séries consumindo a API do TMDb com Axios.",
-      en: "Movie and series catalog consuming the TMDb API with Axios.",
-    },
-    stack: ["JavaScript", "Axios", "TMDb API"],
-    live: "https://igorjba.github.io/cubos-flix/",
-    repo: "https://github.com/igorjba/cubos-flix",
-  },
-  {
-    slug: "jogo-da-memoria",
-    name: "Jogo da memória",
-    year: "2023",
-    blurb: {
-      pt: "Jogo da memória responsivo, com contador de movimentos e reinício.",
-      en: "Responsive memory game with a move counter and restart.",
-    },
-    stack: ["React", "CSS"],
-    live: "https://jogo-da-memoria-chi.vercel.app",
-    repo: "https://github.com/igorjba/jogo-da-memoria",
-  },
-  {
-    slug: "moda-masculina",
-    name: "Moda masculina",
-    year: "2023",
-    blurb: {
-      pt: "Vitrine de produtos com modal de detalhe e galeria.",
-      en: "Product showcase with a detail modal and gallery.",
-    },
-    stack: ["React", "CSS"],
-    live: "https://moda-masculina.vercel.app/",
-    repo: "https://github.com/igorjba/moda-masculina",
+    disabled: true,
   },
 ];
 
@@ -371,11 +336,6 @@ export const work = {
   live: { pt: "Ver ao vivo", en: "Live" },
   code: { pt: "Código", en: "Code" },
   privateRepo: { pt: "Repositório privado", en: "Private repository" },
-  archiveTitle: { pt: "Arquivo", en: "Archive" },
-  archiveNote: {
-    pt: "Estudos antigos, do começo da virada de carreira. Ficam no ar porque apagar o começo é uma forma chata de mentir.",
-    en: "Older studies, from the start of the career switch. They stay online because deleting your beginnings is a boring way of lying.",
-  },
 } as const;
 
 export const stack = {
