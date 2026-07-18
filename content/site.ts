@@ -230,10 +230,27 @@ export type Project = {
   note?: L;
   stack: ReadonlyArray<string>;
   live?: string;
-  repo: string;
+  /** Ausente quando o repositorio e privado. */
+  repo?: string;
 };
 
 export const featuredProjects: ReadonlyArray<Project> = [
+  {
+    slug: "meshvigil",
+    name: "MeshVigil",
+    year: "2025",
+    image: "/work/meshvigil.jpg",
+    blurb: {
+      pt: "Simulador de rede mesh AMI com console de observabilidade: medidores roteando por coletores até o head-end, reconvergência da malha ao vivo, injeção de caos e painel de SLA. No coração, um codec DLMS/COSEM de verdade — HDLC, APDUs, códigos OBIS — que codifica cada leitura em bytes e decodifica de volta.",
+      en: "An AMI mesh-network simulator with an observability console: meters routing through collectors up to a head-end, live mesh reconvergence, chaos injection and an SLA panel. At its core, a real DLMS/COSEM codec — HDLC, APDUs, OBIS codes — that encodes every reading to bytes and decodes it back.",
+    },
+    note: {
+      pt: "A simulação inteira roda no navegador, de propósito: não tem backend para cair por timeout, roda de graça na Vercel, e a malha reconverge na sua frente quando você derruba um coletor. Foi como trouxe o que faço no setor elétrico para algo que dá para abrir e quebrar.",
+      en: "The whole simulation runs in the browser, on purpose: no backend to time out, free to host on Vercel, and the mesh reconverges in front of you when you kill a collector. It's how I brought what I do in the power sector into something you can open and break.",
+    },
+    stack: ["Next.js", "TypeScript", "Zustand", "DLMS/COSEM", "OpenTelemetry", "Vitest"],
+    live: "https://meshvigil.vercel.app/",
+  },
   {
     slug: "moneyflix",
     name: "MoneyFlix",
@@ -267,23 +284,6 @@ export const featuredProjects: ReadonlyArray<Project> = [
     stack: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
     live: "https://dindin-psi.vercel.app/",
     repo: "https://github.com/igorjba/dindin",
-  },
-  {
-    slug: "music-player",
-    name: "Music Player",
-    year: "2023",
-    image: "/work/music-player.jpg",
-    blurb: {
-      pt: "Player de música em React: play, pause, faixa anterior e próxima, com barra de progresso ligada ao tempo real do áudio.",
-      en: "A React music player: play, pause, previous and next track, with a progress bar wired to the audio's real time.",
-    },
-    note: {
-      pt: "Áudio é um bom professor de estado: o elemento tem a verdade, o React só acha que tem. Sincronizar os dois é o projeto inteiro.",
-      en: "Audio is a good teacher of state: the element holds the truth, React only thinks it does. Syncing the two is the whole project.",
-    },
-    stack: ["React", "JavaScript", "DOM API", "CSS"],
-    live: "https://music-player-igorjba.vercel.app/",
-    repo: "https://github.com/igorjba/music-player",
   },
 ];
 
@@ -324,18 +324,6 @@ export const archiveProjects: ReadonlyArray<Project> = [
     live: "https://moda-masculina.vercel.app/",
     repo: "https://github.com/igorjba/moda-masculina",
   },
-  {
-    slug: "desafio-frontend",
-    name: "Desafio front-end",
-    year: "2023",
-    blurb: {
-      pt: "Quatro landing pages a partir de layout do Figma, em HTML e CSS puros.",
-      en: "Four landing pages built from a Figma layout, in plain HTML and CSS.",
-    },
-    stack: ["HTML", "CSS"],
-    live: "https://igorjba.github.io/desafio-frontend-M02-2023/",
-    repo: "https://github.com/igorjba/desafio-frontend-M02-2023",
-  },
 ];
 
 export const work = {
@@ -347,6 +335,7 @@ export const work = {
   },
   live: { pt: "Ver ao vivo", en: "Live" },
   code: { pt: "Código", en: "Code" },
+  privateRepo: { pt: "Repositório privado", en: "Private repository" },
   archiveTitle: { pt: "Arquivo", en: "Archive" },
   archiveNote: {
     pt: "Estudos antigos, do começo da virada de carreira. Ficam no ar porque apagar o começo é uma forma chata de mentir.",

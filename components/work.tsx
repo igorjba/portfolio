@@ -73,16 +73,23 @@ function FeaturedCard({ project, lang, index }: { project: Project; lang: Lang; 
                 <span className="sr-only">— {project.name}</span>
               </a>
             ) : null}
-            <a
-              href={project.repo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group/link inline-flex items-center gap-1.5 text-sm text-dust transition-colors duration-300 hover:text-bone"
-            >
-              {work.code[lang]}
-              <ArrowUpRight />
-              <span className="sr-only">— {project.name}</span>
-            </a>
+            {project.repo ? (
+              <a
+                href={project.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/link inline-flex items-center gap-1.5 text-sm text-dust transition-colors duration-300 hover:text-bone"
+              >
+                {work.code[lang]}
+                <ArrowUpRight />
+                <span className="sr-only">— {project.name}</span>
+              </a>
+            ) : null}
+            {!project.repo ? (
+              <span className="font-mono text-[11px] tracking-wide text-dust-2 uppercase">
+                {work.privateRepo[lang]}
+              </span>
+            ) : null}
           </div>
         </div>
       </article>
