@@ -250,6 +250,24 @@ export const featuredProjects: ReadonlyArray<Project> = [
     },
     stack: ["Next.js", "TypeScript", "Zustand", "DLMS/COSEM", "OpenTelemetry", "Vitest"],
     live: "https://meshvigil.vercel.app/",
+    repo: "https://github.com/igorjba/meshvigil",
+  },
+  {
+    slug: "auscult",
+    name: "Auscult",
+    year: "2025",
+    image: "/work/auscult.jpg",
+    blurb: {
+      pt: "Diagnóstico de vibração de máquinas rotativas no navegador: FFT com janelamento, envelope por Hilbert e as frequências de defeito de rolamento (BPFO, BPFI, BSF) calculadas a partir da geometria. Um motor de regras aponta a falha — pista externa, desalinhamento, folga — com a severidade classificada pela ISO 20816.",
+      en: "In-browser vibration diagnostics for rotating machinery: windowed FFT, Hilbert envelope, and bearing defect frequencies (BPFO, BPFI, BSF) computed from geometry. A rule engine names the fault — outer race, misalignment, looseness — with severity graded by ISO 20816.",
+    },
+    note: {
+      pt: "Passei anos na refinaria diagnosticando rolamento por vibração. O Auscult é esse conhecimento virado código: todo o processamento de sinal roda no navegador, e o detector é validado contra o dataset de rolamentos da Case Western — inclusive nos casos em que ele erra.",
+      en: "I spent years in the refinery diagnosing bearings through vibration analysis. Auscult is that knowledge turned into code: all the signal processing runs in the browser, and the detector is validated against Case Western's bearing dataset — including the cases where it gets it wrong.",
+    },
+    stack: ["Next.js", "TypeScript", "DSP", "FFT", "ISO 20816", "Vitest"],
+    live: "https://auscult-mu.vercel.app/",
+    repo: "https://github.com/igorjba/auscult",
   },
   {
     slug: "moneyflix",
