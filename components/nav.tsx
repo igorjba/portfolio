@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { nav, profile, ui, type Lang } from "@/content/site";
 import { PulseDot } from "@/components/pulse-dot";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { pathFor } from "@/lib/site";
 
 export function Nav({ lang }: { lang: Lang }) {
@@ -90,6 +91,8 @@ export function Nav({ lang }: { lang: Lang }) {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle lang={lang} />
+
           <Link
             href={pathFor(other)}
             hrefLang={other === "pt" ? "pt-BR" : "en"}

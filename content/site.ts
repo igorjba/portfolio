@@ -421,6 +421,7 @@ export const ui = {
   skipToContent: { pt: "Pular para o conteúdo", en: "Skip to content" },
   menu: { pt: "Menu", en: "Menu" },
   close: { pt: "Fechar", en: "Close" },
+  themeToggle: { pt: "Alternar tema claro e escuro", en: "Toggle light and dark theme" },
 } as const;
 
 export const meta = {

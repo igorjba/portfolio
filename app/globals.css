@@ -21,6 +21,61 @@
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/*
+ * Tema. O dark e o padrao (valores do @theme acima). O light so sobrescreve os
+ * tokens de cor: `ink` (fundo) e `bone` (texto) trocam de papel, e `signal` escurece
+ * para manter contraste em fundo claro — como texto e como fundo de botao (text-ink).
+ */
+:root {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --color-ink: oklch(0.98 0.003 85);
+  --color-ink-2: oklch(0.955 0.004 85);
+  --color-ink-3: oklch(0.925 0.005 85);
+  --color-line: oklch(0.85 0.007 260);
+  --color-bone: oklch(0.23 0.014 265);
+  --color-dust: oklch(0.42 0.012 262);
+  --color-dust-2: oklch(0.5 0.012 262);
+  --color-signal: oklch(0.54 0.16 56);
+  --color-signal-dim: oklch(0.6 0.14 60);
+}
+
+/* Icone do toggle: sol no dark (default), lua no light — trocado por CSS, sem estado no JS. */
+.theme-icon-light {
+  display: none;
+}
+[data-theme="light"] .theme-icon-dark {
+  display: none;
+}
+[data-theme="light"] .theme-icon-light {
+  display: block;
+}
+
+/* Transicao suave aplicada so durante a troca de tema (evita flash no load e nao mexe nos hovers). */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease,
+    fill 0.4s ease,
+    stroke 0.4s ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition *,
+  .theme-transition *::before,
+  .theme-transition *::after {
+    transition: none !important;
+  }
+}
+
 @layer base {
   ::selection {
     background: var(--color-signal);
