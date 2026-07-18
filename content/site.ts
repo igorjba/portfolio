@@ -270,6 +270,23 @@ export const featuredProjects: ReadonlyArray<Project> = [
     repo: "https://github.com/igorjba/auscult",
   },
   {
+    slug: "critpath",
+    name: "CritPath",
+    year: "2025",
+    image: "/work/critpath.jpg",
+    blurb: {
+      pt: "Otimizador de parada de manutenção modelado como RCPSP: milhares de ordens, precedências, equipes limitadas e janela fixa. O solver — serial SGS com simulated annealing — é compilado para WebAssembly e roda numa Web Worker, no cliente. Importa o export do SAP PM (IW39/IW49), calcula caminho crítico, risco de data por Monte Carlo, e mede o gap contra o dataset PSPLIB, que tem ótimo provado.",
+      en: "A maintenance-shutdown optimizer modeled as RCPSP: thousands of orders, precedences, limited crews and a fixed window. The solver — serial SGS with simulated annealing — compiles to WebAssembly and runs in a Web Worker, on the client. It imports SAP PM exports (IW39/IW49), computes the critical path, date risk via Monte Carlo, and measures its gap against the PSPLIB dataset, which has proven optima.",
+    },
+    note: {
+      pt: "Passei anos planejando parada de manutenção no SAP, decidindo com meses de antecedência quando cada equipamento parava. O CritPath é esse problema virado solver: lê o mesmo export do SAP que eu usava e otimiza o cronograma — com o gap medido contra ótimo provado, não declarado.",
+      en: "I spent years planning maintenance shutdowns in SAP, deciding months ahead when each asset would stop. CritPath is that problem turned into a solver: it reads the same SAP export I used and optimizes the schedule — with the gap measured against proven optima, not claimed.",
+    },
+    stack: ["Next.js", "TypeScript", "WebAssembly", "RCPSP", "Monte Carlo", "Web Workers"],
+    live: "https://critpath-two.vercel.app/",
+    repo: "https://github.com/igorjba/critpath",
+  },
+  {
     slug: "moneyflix",
     name: "MoneyFlix",
     year: "2024",
