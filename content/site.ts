@@ -255,6 +255,23 @@ export const featuredProjects: ReadonlyArray<Project> = [
     repo: "https://github.com/igorjba/meshvigil",
   },
   {
+    slug: "ledgerline",
+    name: "Ledgerline",
+    year: "2026",
+    image: "/work/ledgerline.jpg",
+    blurb: {
+      pt: "Motor de faturamento de energia bitemporal: ingere leituras de forma idempotente e fora de ordem, precifica contra uma tarifa ANEEL versionada (período, bandeira, feriado móvel) e lança num razão de partidas dobradas que sempre soma zero. Mantém o histórico em dois eixos — valid_time × transaction_time — que reproduz qualquer fatura como ela era conhecida em qualquer data.",
+      en: "A bitemporal energy-billing engine: it ingests readings idempotently and out of order, prices them against a versioned ANEEL tariff (period, flag, moving holiday) and posts to a double-entry ledger that always sums to zero. It keeps history on two axes — valid_time × transaction_time — reproducing any invoice exactly as it was known on any date.",
+    },
+    note: {
+      pt: "A regra do dinheiro não fica no if do código: o Postgres recusa uma asserção bitemporal sobreposta com um EXCLUDE gist, e o razão que soma zero é provado por propriedade sobre milhares de sequências embaralhadas — não afirmado.",
+      en: "The money invariant doesn't live in a code branch: Postgres rejects an overlapping bitemporal assertion with an EXCLUDE gist, and the zero-sum ledger is proven by property over thousands of scrambled sequences — not claimed.",
+    },
+    stack: ["Next.js", "TypeScript", "PostgreSQL", "Bitemporal", "Double-entry", "fast-check"],
+    live: "https://ledgerline-gamma.vercel.app/",
+    repo: "https://github.com/igorjba/ledgerline",
+  },
+  {
     slug: "auscult",
     name: "Auscult",
     year: "2025",
