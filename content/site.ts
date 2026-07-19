@@ -223,7 +223,8 @@ export const education: ReadonlyArray<{ school: string; course: L; period: strin
 export type Project = {
   slug: string;
   name: string;
-  year: string;
+  /** Bilingue porque os meses abreviados diferem entre PT e EN. */
+  year: L;
   image?: string;
   blurb: L;
   /** O que o projeto ensinou ou resolveu — o que interessa a quem contrata. */
@@ -238,26 +239,9 @@ export type Project = {
 
 export const featuredProjects: ReadonlyArray<Project> = [
   {
-    slug: "meshvigil",
-    name: "MeshVigil",
-    year: "2025",
-    image: "/work/meshvigil.jpg",
-    blurb: {
-      pt: "Simulador de rede mesh AMI com console de observabilidade: medidores roteando por coletores até o head-end, reconvergência da malha ao vivo, injeção de caos e painel de SLA. No coração, um codec DLMS/COSEM de verdade — HDLC, APDUs, códigos OBIS — que codifica cada leitura em bytes e decodifica de volta.",
-      en: "An AMI mesh-network simulator with an observability console: meters routing through collectors up to a head-end, live mesh reconvergence, chaos injection and an SLA panel. At its core, a real DLMS/COSEM codec — HDLC, APDUs, OBIS codes — that encodes every reading to bytes and decodes it back.",
-    },
-    note: {
-      pt: "A simulação inteira roda no navegador, de propósito: não tem backend para cair por timeout, roda de graça na Vercel, e a malha reconverge na sua frente quando você derruba um coletor. Foi como trouxe o que faço no setor elétrico para algo que dá para abrir e quebrar.",
-      en: "The whole simulation runs in the browser, on purpose: no backend to time out, free to host on Vercel, and the mesh reconverges in front of you when you kill a collector. It's how I brought what I do in the power sector into something you can open and break.",
-    },
-    stack: ["Next.js", "TypeScript", "Zustand", "DLMS/COSEM", "OpenTelemetry", "Vitest"],
-    live: "https://meshvigil.vercel.app/",
-    repo: "https://github.com/igorjba/meshvigil",
-  },
-  {
     slug: "ledgerline",
     name: "Ledgerline",
-    year: "2026",
+    year: { pt: "mai–jun 2026", en: "May–Jun 2026" },
     image: "/work/ledgerline.jpg",
     blurb: {
       pt: "Motor de faturamento de energia bitemporal: ingere leituras de forma idempotente e fora de ordem, precifica contra uma tarifa ANEEL versionada (período, bandeira, feriado móvel) e lança num razão de partidas dobradas que sempre soma zero. Mantém o histórico em dois eixos — valid_time × transaction_time — que reproduz qualquer fatura como ela era conhecida em qualquer data.",
@@ -272,26 +256,26 @@ export const featuredProjects: ReadonlyArray<Project> = [
     repo: "https://github.com/igorjba/ledgerline",
   },
   {
-    slug: "auscult",
-    name: "Auscult",
-    year: "2025",
-    image: "/work/auscult.jpg",
+    slug: "meshvigil",
+    name: "MeshVigil",
+    year: { pt: "mar–abr 2026", en: "Mar–Apr 2026" },
+    image: "/work/meshvigil.jpg",
     blurb: {
-      pt: "Diagnóstico de vibração de máquinas rotativas no navegador: FFT com janelamento, envelope por Hilbert e as frequências de defeito de rolamento (BPFO, BPFI, BSF) calculadas a partir da geometria. Um motor de regras aponta a falha — pista externa, desalinhamento, folga — com a severidade classificada pela ISO 20816.",
-      en: "In-browser vibration diagnostics for rotating machinery: windowed FFT, Hilbert envelope, and bearing defect frequencies (BPFO, BPFI, BSF) computed from geometry. A rule engine names the fault — outer race, misalignment, looseness — with severity graded by ISO 20816.",
+      pt: "Simulador de rede mesh AMI com console de observabilidade: medidores roteando por coletores até o head-end, reconvergência da malha ao vivo, injeção de caos e painel de SLA. No coração, um codec DLMS/COSEM de verdade — HDLC, APDUs, códigos OBIS — que codifica cada leitura em bytes e decodifica de volta.",
+      en: "An AMI mesh-network simulator with an observability console: meters routing through collectors up to a head-end, live mesh reconvergence, chaos injection and an SLA panel. At its core, a real DLMS/COSEM codec — HDLC, APDUs, OBIS codes — that encodes every reading to bytes and decodes it back.",
     },
     note: {
-      pt: "Passei anos na refinaria diagnosticando rolamento por vibração. O Auscult é esse conhecimento virado código: todo o processamento de sinal roda no navegador, e o detector é validado contra o dataset de rolamentos da Case Western — inclusive nos casos em que ele erra.",
-      en: "I spent years in the refinery diagnosing bearings through vibration analysis. Auscult is that knowledge turned into code: all the signal processing runs in the browser, and the detector is validated against Case Western's bearing dataset — including the cases where it gets it wrong.",
+      pt: "A simulação inteira roda no navegador, de propósito: não tem backend para cair por timeout, roda de graça na Vercel, e a malha reconverge na sua frente quando você derruba um coletor. Foi como trouxe o que faço no setor elétrico para algo que dá para abrir e quebrar.",
+      en: "The whole simulation runs in the browser, on purpose: no backend to time out, free to host on Vercel, and the mesh reconverges in front of you when you kill a collector. It's how I brought what I do in the power sector into something you can open and break.",
     },
-    stack: ["Next.js", "TypeScript", "DSP", "FFT", "ISO 20816", "Vitest"],
-    live: "https://auscult-mu.vercel.app/",
-    repo: "https://github.com/igorjba/auscult",
+    stack: ["Next.js", "TypeScript", "Zustand", "DLMS/COSEM", "OpenTelemetry", "Vitest"],
+    live: "https://meshvigil.vercel.app/",
+    repo: "https://github.com/igorjba/meshvigil",
   },
   {
     slug: "critpath",
     name: "CritPath",
-    year: "2025",
+    year: { pt: "jan–fev 2026", en: "Jan–Feb 2026" },
     image: "/work/critpath.jpg",
     blurb: {
       pt: "Otimizador de parada de manutenção modelado como RCPSP: milhares de ordens, precedências, equipes limitadas e janela fixa. O solver — serial SGS com simulated annealing — é compilado para WebAssembly e roda numa Web Worker, no cliente. Importa o export do SAP PM (IW39/IW49), calcula caminho crítico, risco de data por Monte Carlo, e mede o gap contra o dataset PSPLIB, que tem ótimo provado.",
@@ -306,9 +290,43 @@ export const featuredProjects: ReadonlyArray<Project> = [
     repo: "https://github.com/igorjba/critpath",
   },
   {
+    slug: "auscult",
+    name: "Auscult",
+    year: { pt: "nov–dez 2025", en: "Nov–Dec 2025" },
+    image: "/work/auscult.jpg",
+    blurb: {
+      pt: "Diagnóstico de vibração de máquinas rotativas no navegador: FFT com janelamento, envelope por Hilbert e as frequências de defeito de rolamento (BPFO, BPFI, BSF) calculadas a partir da geometria. Um motor de regras aponta a falha — pista externa, desalinhamento, folga — com a severidade classificada pela ISO 20816.",
+      en: "In-browser vibration diagnostics for rotating machinery: windowed FFT, Hilbert envelope, and bearing defect frequencies (BPFO, BPFI, BSF) computed from geometry. A rule engine names the fault — outer race, misalignment, looseness — with severity graded by ISO 20816.",
+    },
+    note: {
+      pt: "Passei anos na refinaria diagnosticando rolamento por vibração. O Auscult é esse conhecimento virado código: todo o processamento de sinal roda no navegador, e o detector é validado contra o dataset de rolamentos da Case Western — inclusive nos casos em que ele erra.",
+      en: "I spent years in the refinery diagnosing bearings through vibration analysis. Auscult is that knowledge turned into code: all the signal processing runs in the browser, and the detector is validated against Case Western's bearing dataset — including the cases where it gets it wrong.",
+    },
+    stack: ["Next.js", "TypeScript", "DSP", "FFT", "ISO 20816", "Vitest"],
+    live: "https://auscult-mu.vercel.app/",
+    repo: "https://github.com/igorjba/auscult",
+  },
+  {
+    slug: "pricetime",
+    name: "Pricetime",
+    year: { pt: "set–out 2025", en: "Sep–Oct 2025" },
+    image: "/work/pricetime.jpg",
+    blurb: {
+      pt: "Motor de livro de ofertas (matching engine) — o núcleo de uma bolsa. Casa ordens de compra e venda por prioridade preço-tempo, suporta limit, market, IOC, FOK, cancelamento e substituição, e registra cada negócio por event sourcing, com replay determinístico bit a bit a partir de uma única semente.",
+      en: "An order-book matching engine — the core of an exchange. It matches buy and sell orders by price-time priority, supports limit, market, IOC, FOK, cancel and replace, and records every trade via event sourcing, with bit-for-bit deterministic replay from a single seed.",
+    },
+    note: {
+      pt: "Num sistema que move dinheiro, correção é a funcionalidade. Cada invariante — caixa e ações conservados, o livro nunca cruzado, ninguém furando a fila — é provada por teste de propriedade sobre milhares de fluxos de ordens aleatórios, e verificada ao vivo na tela. Provada, não prometida.",
+      en: "In a system that moves money, correctness is the feature. Every invariant — cash and shares conserved, the book never crossed, no one jumping the queue — is proven by property testing over thousands of random order flows, and checked live on screen. Proven, not promised.",
+    },
+    stack: ["Next.js", "TypeScript", "Matching Engine", "Event Sourcing", "fast-check"],
+    live: "https://pricetime-seven.vercel.app/",
+    repo: "https://github.com/igorjba/pricetime",
+  },
+  {
     slug: "moneyflix",
     name: "MoneyFlix",
-    year: "2024",
+    year: { pt: "2024", en: "2024" },
     image: "/work/moneyflix.jpg",
     blurb: {
       pt: "Gestor financeiro pessoal completo: cadastro, transações, categorias e relatório. React na frente, Node e Express atrás, PostgreSQL embaixo.",
@@ -326,7 +344,7 @@ export const featuredProjects: ReadonlyArray<Project> = [
   {
     slug: "dindin",
     name: "Dindin",
-    year: "2023",
+    year: { pt: "2023", en: "2023" },
     image: "/work/dindin.jpg",
     blurb: {
       pt: "Controle financeiro com resumo de entradas e saídas, filtro por categoria e ordenação por data. API REST própria com Express e Postgres.",
@@ -395,8 +413,13 @@ export const contact = {
   },
   primary: { pt: "Chamar no LinkedIn", en: "Message me on LinkedIn" },
   availability: {
-    pt: "Salvador, BA · remoto ou híbrido · disponível para conversas",
-    en: "Salvador, Brazil · remote or hybrid · open to conversations",
+    pt: "remoto ou híbrido",
+    en: "remote or hybrid",
+  },
+  /** So esta parte vira link para o LinkedIn e pulsa. */
+  availabilityCta: {
+    pt: "disponível para conversas",
+    en: "open to conversations",
   },
 } as const;
 

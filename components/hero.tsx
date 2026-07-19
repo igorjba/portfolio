@@ -20,10 +20,16 @@ export function Hero({ lang }: { lang: Lang }) {
             {profile.name} — {profile.role[lang]}
           </p>
           <span aria-hidden="true" className="h-px flex-1 bg-line" />
-          <p className="flex items-center gap-2 font-mono text-xs text-dust">
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${hero.status[lang]} — LinkedIn`}
+            className="flex items-center gap-2 font-mono text-xs text-dust [animation:status-pulse_4.5s_ease-in-out_infinite] hover:text-signal hover:[animation:none]"
+          >
             <PulseDot />
             {hero.status[lang]}
-          </p>
+          </a>
         </div>
 
         <h1 className="rise mt-8 text-[length:var(--text-display)] leading-[0.92] font-normal" style={rise(80)}>

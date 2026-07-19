@@ -37,7 +37,17 @@ export function Contact({ lang }: { lang: Lang }) {
           <Reveal delay={0.1}>
             <p className="flex items-center gap-2 font-mono text-xs text-dust-2">
               <PulseDot />
-              {contact.availability[lang]}
+              <span>{contact.availability[lang]}</span>
+              <span aria-hidden="true">·</span>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${contact.availabilityCta[lang]} — LinkedIn`}
+                className="[animation:status-pulse_4.5s_ease-in-out_infinite] hover:text-signal hover:[animation:none]"
+              >
+                {contact.availabilityCta[lang]}
+              </a>
             </p>
           </Reveal>
         </div>

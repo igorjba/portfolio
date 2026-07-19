@@ -43,7 +43,7 @@ function FeaturedCard({ project, lang, index }: { project: Project; lang: Lang; 
         <div className="flex flex-col md:py-2">
           <div className="flex items-baseline gap-3">
             <h3 className="font-display text-2xl text-bone">{project.name}</h3>
-            <span className="label">{project.year}</span>
+            <span className="label">{project.year[lang]}</span>
           </div>
 
           <p className="mt-3 leading-relaxed text-dust">{project.blurb[lang]}</p>

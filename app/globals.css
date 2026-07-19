@@ -208,6 +208,18 @@
   }
 }
 
+/*
+ * Pulso discreto do texto de status: sem 0%/100% explicitos para partir da cor base
+ * de cada elemento (dust ou dust-2), acender em signal e voltar. O text-shadow encorpa
+ * levemente no pico — a impressao de "mais bold" sem mudar a largura (zero layout shift).
+ */
+@keyframes status-pulse {
+  50% {
+    color: var(--color-signal);
+    text-shadow: 0 0 0.4px var(--color-signal);
+  }
+}
+
 @keyframes trace-draw {
   to {
     stroke-dashoffset: 0;
