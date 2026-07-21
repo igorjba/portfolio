@@ -233,8 +233,6 @@ export type Project = {
   live?: string;
   /** Ausente quando o repositorio e privado. */
   repo?: string;
-  /** Mantido nos dados, oculto da renderizacao. */
-  disabled?: boolean;
 };
 
 export const featuredProjects: ReadonlyArray<Project> = [
@@ -324,40 +322,21 @@ export const featuredProjects: ReadonlyArray<Project> = [
     repo: "https://github.com/igorjba/pricetime",
   },
   {
-    slug: "moneyflix",
-    name: "MoneyFlix",
-    year: { pt: "2024", en: "2024" },
-    image: "/work/moneyflix.jpg",
+    slug: "refract",
+    name: "Refract",
+    year: { pt: "jul 2026", en: "Jul 2026" },
+    image: "/work/refract.jpg",
     blurb: {
-      pt: "Gestor financeiro pessoal completo: cadastro, transações, categorias e relatório. React na frente, Node e Express atrás, PostgreSQL embaixo.",
-      en: "A complete personal finance manager: sign-up, transactions, categories and reports. React up front, Node and Express behind it, PostgreSQL underneath.",
+      pt: "Previsão de surf calculada por pico, não por praia. A malha pública de ondulação tem 8 km e devolve os mesmos números para picos vizinhos, então a diferença entre eles vem de um modelo físico: dispersão, empolamento, refração de Snell e profundidade de quebra, mais maré prevista por soma de constituintes harmônicos.",
+      en: "Surf forecasting computed per break, not per beach. The public swell grid is 8 km wide and returns identical numbers for neighboring breaks, so the difference between them comes from a physical model: dispersion, shoaling, Snell refraction and breaking depth, plus tide predicted by summing harmonic constituents.",
     },
     note: {
-      pt: "Foi aqui que parei de tratar autenticação como detalhe: token, expiração e rota protegida resolvidos no backend, não no if do componente.",
-      en: "This is where I stopped treating auth as a detail: tokens, expiry and protected routes solved in the backend, not in a component's if statement.",
+      pt: "A nota nunca aparece sozinha: sai aberta nos seis fatores que a produziram, com a grandeza medida ao lado, e todo parâmetro de pico declara se foi medido ou estimado. A maré prevista bate com a tábua da Marinha em 21 mm, e as invariantes do modelo são verificadas sobre mil casos gerados por execução.",
+      en: "The score never stands alone: it comes broken into the six factors that produced it, each with its measured quantity, and every break parameter declares whether it was measured or estimated. The predicted tide matches the Brazilian Navy's table within 21 mm, and the model's invariants are checked over a thousand generated cases per run.",
     },
-    stack: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
-    live: "https://moneyflix-front.vercel.app/",
-    repo: "https://github.com/igorjba/moneyflix-front",
-    disabled: true,
-  },
-  {
-    slug: "dindin",
-    name: "Dindin",
-    year: { pt: "2023", en: "2023" },
-    image: "/work/dindin.jpg",
-    blurb: {
-      pt: "Controle financeiro com resumo de entradas e saídas, filtro por categoria e ordenação por data. API REST própria com Express e Postgres.",
-      en: "Finance tracker with an income/expense summary, category filters and date sorting. Its own REST API with Express and Postgres.",
-    },
-    note: {
-      pt: "Feito antes do MoneyFlix e deixado de propósito no ar: dá para ver o que eu ainda não sabia — inclusive que responsivo não é etapa final.",
-      en: "Built before MoneyFlix and deliberately left online: you can see what I didn't know yet — including that responsive isn't a final step.",
-    },
-    stack: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
-    live: "https://dindin-psi.vercel.app/",
-    repo: "https://github.com/igorjba/dindin",
-    disabled: true,
+    stack: ["Next.js", "TypeScript", "Wave physics", "Harmonic tide", "fast-check", "Zod"],
+    live: "https://refract-three.vercel.app/",
+    repo: "https://github.com/igorjba/Refract",
   },
 ];
 

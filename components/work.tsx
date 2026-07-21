@@ -110,11 +110,9 @@ export function Work({ lang }: { lang: Lang }) {
         </Reveal>
 
         <ul className="mt-14 space-y-5">
-          {featuredProjects
-            .filter((project) => !project.disabled)
-            .map((project, index) => (
-              <FeaturedCard key={project.slug} project={project} lang={lang} index={index} />
-            ))}
+          {featuredProjects.map((project, index) => (
+            <FeaturedCard key={project.slug} project={project} lang={lang} index={index} />
+          ))}
         </ul>
       </div>
     </section>
